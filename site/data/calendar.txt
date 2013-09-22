@@ -1,0 +1,92 @@
++2013
+//0
+//1
+//2
+//3
+//4
+//5
+//6
+29:Work: 5-10
+30:Work: 10-7
+31:Work: 11-4
+//7
+1:Work: 2:30-10
+2:Doctors: 10am
+3:Work: 3-10
+4:Work: 3-7
+5:Work: 9:30-6 (ser)
+7:Work: 4-10
+10:Work: 9:30-6
+11:Work: 12-7
+12:Work: 12-9
+14:Work: 9:30-6
+15:Work: 12-9
+16:Work: 4-10
+17:Work: 3-10
+18:Work: 10:30 - 6
+19:Work: 2:30-10
+20:Work: 4-10
+22:Work: 11-8
+23:School (orientation): 9-12
+24:Work: 1-10
+25:Work: 12-7
+26:Gen Chem (Zimmer): 10:10-11:05__n__Calc (60W Charl 120): 12:20-1:15__n__EngF (Bald 860D): 3:35-4:30__n____n__Work: 6-10
+27:Calc: 12:20-1:15
+28:EngM (OldChem 805) 8-8:55__n__Gen Chem (Zimmer): 10:10-11:05__n__Calc (60W Charl 120): 12:20-1:15__n__Chem (Zimmer 309): 3:35-4:30__n__EngF (Rhodes 801A) 4:40-6:40
+29:Work: 1-10
+30:EngM (RecCen 3240): 8-10__n__Chem (Zim): 10:10-11:05__n__Calc (60WC 120): 12:20-1:15__n____n__Work: 2-9
+31:Work: 9:30-6:30
+//8
+2:Calc Homework due (2.1-2.3)__n__Chem Homework due__n__
+3:Calc Quiz (60WC) 12:20-1:15__n__ChemL (Riev 533) 3:00-4:50
+4:EngM (OldChem 805) 8-8:55__n__Chem (Zimmer): 10:10-11:05__n__Calc (60WC 120): 12:20-1:15__n__Chem (Zimmer 309): 3:35-4:30__n__EngF (Rhodes 801A) 4:40-6:40
+5:Work: 10-7
+6:EngM (RecCen 3240): 8-10__n__Chem (Zim): 10:10-11:05__n__Calc (60WC 120): 12:20-1:15__n____n__Work: 2:30-9
+7:Work: 9:30-6
+8:Calc Homework due
+9:Chem learnsmart due__n__Chem HW (2.7)__n____n__Gen Chem (Zimmer): 10:10-11:05__n__Calc (60W Charl 120): 12:20-1:15__n__EngF (Bald 860D): 3:35-4:30__n____n__Work: 6:30-10
+10:Chemlab pre-lab quiz due__n____n__Calc Test__n____n__Zedd
+11:EngF Lab due__n____n__Chem HW2 due
+17:Chemlab homework due
+//9
+//10
+//11
++2014
+//0
+//1
+//2
+//3
+//4
+//5
+//6
+//7
+//8
+//9
+//10
+//11
++2015
+//0
+//1
+//2
+//3
+//4
+//5
+//6
+//7
+//8
+//9
+//10
+//11
++2017
+//0
+//1
+//2
+//3
+//4
+//5
+//6
+//7
+//8
+//9
+//10
+//11

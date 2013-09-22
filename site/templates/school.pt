@@ -1,0 +1,16 @@
+<div metal:use-macro="view.global_template">
+    <div metal:fill-slot="content">
+        <a href="/files">
+            <div class="listItem">
+                <h2>Files</h2>
+                <h5>A cloud storage system</h5>
+            </div>
+        </a>
+        <a href="/calendar">
+            <div class="listItem">
+                <h2>Calendar</h2>
+                <h5>A schedule for school</h5>
+            </div>
+        </a>
+    </div>
+</div>

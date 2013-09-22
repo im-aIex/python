@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      metal:define-macro="layout">
+<head>
+    <title>${page_title} - Alex Herring Productions</title>
+    <link rel="stylesheet" href="/static/style.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="/static/global.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="header">
+			<h1>${header_title}</h1>
+			<div id="headerLinks">
+			<div id="headerLinkList">
+				<ul>
+					<li tal:repeat="part header_menu">
+						<a href="${part.link}">${part.name}</a>
+					</li>
+					<li>
+						<a tal:condition="logged_in" href="/login/logout">Log Out</a>
+                                                <a tal:condition="not: logged_in" href="/login">Log In</a>
+					</li>
+				</ul>
+			</div>
+			</div>
+		</div>
+		<div id="contentBody">
+			<h1>${page_title}</h1>
+			<div metal:define-slot="content">
+			</div>
+			<div id="footer">
+				<p>Style and code done by: Alex Herring Productions (admin@alexherringproductions.com)</p>
+                <p>This website uses cookies to help make a smooth experience</p>
+				<p>Using <a href="http://www.pylonsproject.org/projects/pyramid" target="_blank">Pyramid Web Framework</a></p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

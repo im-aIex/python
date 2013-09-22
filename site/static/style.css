@@ -1,0 +1,206 @@
+body {
+	color: lightgrey;
+	background: #222;
+	font-family: courier new;
+	background: #222;
+	margin: 0px;
+}
+a {
+	text-decoration: none;
+	color: white;
+}
+
+#header {
+	height: 115px;
+	background: #333
+}
+#header h1 {
+	width: 950px;
+	margin: auto;
+	padding-top: 20px;
+}
+#headerLinks {
+	position: absolute;
+	top: 75px;
+	width: 100%;
+	background: #333;
+	border-bottom: 2px solid #303030;
+	z-index: 9001;
+}
+#headerLinkList {
+	width: 950;
+	height: 40px;
+	margin: auto
+}
+#header ul {
+	margin: auto;
+	padding: 0px;
+	float: right;
+}
+#header ul li {
+	list-style-type: none;
+	display: inline-table; 
+	width : 100px;
+	height: 40px;
+	text-align: center;
+	width: 100px;
+}
+#header a {
+	text-decoration: none;
+	width : 100px;
+	padding: 10px;
+	display: block;
+	background: #333;
+}
+#header a:hover {
+	background: grey;
+}
+
+
+#contentBody {
+	width: 950px;
+	margin: auto;
+	padding: 20px 40px;
+	border: 2px solid #303030;
+	margin-top: 20px;
+	background: #444;
+}
+#contentBody h1 {
+	border-bottom: 1px solid #555;
+}
+#contentBody p {
+	padding-left: 10px;
+}
+#contentBody form {
+	text-align: center;
+}
+
+
+#footer {
+	font-size: 12px;
+	border-top: 2px solid #333;
+	margin: 40px -40px 0px -40px;
+}
+#footer p, #footer a {
+	text-align: center;
+	text-decoration: none;
+	color: #777;
+}
+
+
+#forms {
+	overflow: hidden;
+	padding: 0px 40px;
+	position: relative;
+}
+#add {
+	float: right;
+}
+#add_dir {
+	float: left;
+}
+#progress {
+	display: inline-block;
+	float: right;
+	margin-top: 0;
+}
+.list {
+	width: 214px;
+	display: inline-block;
+	margin-bottom: 40px;
+}
+.list p {
+	width: auto;
+	display: inline-block;
+	margin: 0px;
+	text-align: center;
+	margin-left: 10px;
+}
+.delete {
+	cursor: hand;
+	cursor: pointer;
+}
+.fileItem {
+	list-style-type: none;
+}
+
+.listItem {
+	width: 150;
+	height: 150;
+	text-align: center;
+	padding: 10px;
+	border: 2px solid #666;
+	display: inline-table;
+	margin: 20px;
+	margin-bottom: 5px;
+}
+.listItem h3 {
+	margin-bottom: 0;
+}
+.listItem h6 {
+	margin-bottom: 0;
+}
+.listItemNameContainer {
+	height: 60px;
+}
+
+#tmce {
+    height: 500px;
+}
+
+#calendar {
+	
+}
+#calendar table {
+	width: 100%;
+	border: 1px solid #666;
+}
+#calendar th {
+	border: 1px solid #333;
+	margin: 3px;
+	background: #555;
+	width: 13%;
+}
+#calendar td {
+	border: 1px solid #555;
+	height: 200px;
+	width: 14%;
+	padding: 10px 5px;
+    position: relative;
+}
+.calendar {
+	height: 90%;
+	width: 100%;
+    overflow: auto;
+}
+.calwrapper {
+	height: 250px;
+    position: relative;
+}
+.date {
+	word-wrap: break-word;
+}
+.date_number {
+	position: absolute;
+	bottom: 4px;
+	right: 4px;
+}
+#month_name {
+	display: inline-block;
+}
+#save_button {
+	display: none;
+	cursor: pointer;
+}
+#prev_month {
+	display: inline-block;
+        cursor: hand;
+	float: left;
+}
+#next_month {
+        display: inline-block;
+        cursor: hand;
+	float: left;
+	margin-right: 30px;
+	margin-left: 20px;
+}

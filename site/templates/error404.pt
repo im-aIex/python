@@ -1,0 +1,5 @@
+<div metal:use-macro="view.global_template">
+    <div metal:fill-slot="content">
+        <p>Sorry, that link isn't valid.  You're bad.</p>
+    </div>
+</div>

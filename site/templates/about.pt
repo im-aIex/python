@@ -1,0 +1,8 @@
+<div metal:use-macro="view.global_template">
+    <div metal:fill-slot="content">
+        <p>
+        	This website will be home to some tools to help me through college,
+		these tools inlclude a cloud storage, callendar, and notes.
+        </p>
+    </div>
+</div>

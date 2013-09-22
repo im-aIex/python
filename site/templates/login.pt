@@ -1,0 +1,14 @@
+<div metal:use-macro="view.global_template">
+    <div metal:fill-slot="content">
+        <form action="${url}" method="post">
+            Username: <input type="text" name="login" value=""/><br/>
+            Password: <input type="password" name="password" value=""/><br/>
+            <input type="submit" name="form.submitted" value="Log In"/>
+	</form>
+     <p>${message}</p>
+	 <br/>
+	 <p>Sorry, but for security reasons I have to put a username and password on my site.
+	 This site is used as cloud storage and time management for me, for more information please
+	 shoot me an email @ <a href="mailto:admin@alexherringproductions.com" target="_top">admin@alexherringproductions.com</a></p>
+    </div>
+</div>

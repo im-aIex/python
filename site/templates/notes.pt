@@ -1,0 +1,19 @@
+<div metal:use-macro="view.global_template">
+    <div metal:fill-slot="content">
+        <script src="//tinymce.cachefly.net/4.0/tinymce.min.js"></script>
+        <script>
+             tinymce.init({selector:'tmce'});
+        </script>
+        <div class="list" tal:condition="python:display=='class_list'" tal:repeat="part info">
+            <a href="/notes/${part}">
+                <div class="listItem">
+                    <div class="listItemName">
+                        <h3>${part}</h3>
+                    </div>
+                    <h5>Dir</h5>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+

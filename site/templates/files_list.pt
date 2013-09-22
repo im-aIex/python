@@ -1,0 +1,65 @@
+<div metal:use-macro="view.global_template">
+	<div metal:fill-slot="content">
+		<div id="editNotes" tal:condition="edit">
+			<script src="//tinymce.cachefly.net/4.0/tinymce.min.js"></script>
+			<script>
+			        tinymce.init({selector:'textarea'});
+			</script>
+			<form id="editnote" action="/files${url}" method="post">
+				<textarea name="notecontent" id="tmce">${contents}</textarea>
+                <input type="password" name="password" />
+				<input type="submit" id="saveEdit" value="Save" />
+			</form>
+		</div>
+		<div id="filelist" tal:condition="not:edit">
+            <div id="forms">
+<!-- tal:condition="python:url.find('/media/storage/files/Notes') == -1" -->
+				<form id="add" enctype="multipart/form-data">
+					<input type="file" name="file" />
+					<input id="upload_file" url="/files${url}" type="button" value="Upload" disabled />
+				</form>
+				<form tal:condition="python:up_dir.find('/media/storage/files/Notes') == -1" id="add_dir" action="/files${url}" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+					<input id="dir_name" name="dir_name" type="text" value="">
+					<input id="upload" type="submit" size="4" value="Add Directory" disabled>
+				</form>
+                <form tal:condition="python:up_dir.find('/media/storage/files/Notes') != -1" id="add_dir" action="/files${url}" method="post">
+					<input type="text" name="note_name" />
+					<input id="create_file" type="submit" value="Add Notes" />
+				</form>
+				<p id="progress"></p>
+			</div>
+				
+			<div class="list">
+				<a href="${up_dir}">
+					<div class='listItem'>
+					<div class="listItemNameContainer">
+						<h3>...up</h3>
+					</div>
+						<h5>Dir</h5>
+					</div>
+				</a>
+				<p>Can't Delete</p><br/>
+				<p>Rename</p>
+				<input type="text" size="5" name="new_name" value="Can't Edit" disabled>
+				<input type="button" size="4" value="Nope" disabled>
+			</div>
+			<div tal:repeat="part list" class="list">
+				<a tal:attributes="href python: part.url if up_dir.find('/media/storage/files/Notes') == -1 else ('/'.join(part.url.split('/')[:-1]) + '/edit' if part.is_file and not '.' in part.name else '/'.join(part.url.split('/')[:-1]) + '/download')">
+       					<div class='listItem'>
+						<div class="listItemNameContainer">
+							<h3>${part.name}</h3>
+						</div>
+						<h5 tal:condition="python:part.is_file and up_dir.find('/media/storage/files/Notes') == -1 or '.' in part.name">File</h5>
+						<h5 tal:condition="python:part.is_file and up_dir.find('/media/storage/files/Notes') != -1 and not '.' in part.name">Notes</h5>
+						<h6 tal:condition="part.is_file">(${part.size} Bytes)</h6>
+						<h5 tal:condition="not:part.is_file">Dir</h5>
+				       	</div>
+				</a>
+				<p class="delete" link="${part.url_del}" name="${part.name}">Delete</p><br/>
+				<p class="rename" link="${part.url_ren}" name="${part.name}">Rename</p>
+				<input class="ren_name" type="text" size="5" name="new_name">
+				<input class="done_ren" type="button" size="4" value="Done">
+			</div>
+		</div>
+	</div>
+</div>

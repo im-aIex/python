@@ -1,0 +1,10 @@
+<div metal:use-macro="view.global_template">
+    <div metal:fill-slot="content">
+        <p>
+        	This part of the site will display the different instructions
+        	on how to use the files aspect of this site. <br>
+        	Head over to <a href="/files/media/storage/files/">Home</a> to see the file
+        	browser
+        </p>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+<div metal:use-macro="view.global_template">
+    <div metal:fill-slot="content">
+        <div id="calendar">
+            <h2 id="month_name"></h2>
+            <h2 id="prev_month"><<</h2>
+            <h2 id="next_month">>></h2>
+            <h3 id="save_button">Save</h3>
+            <table>
+                <tbody>
+                    <tr>
+                        <th tal:repeat="num range(7)" class="date_name"></th>
+                    </tr>
+                    <tr tal:repeat="week range(6)" class="week">
+                        <td tal:repeat="num range(7)">
+                            <div class="calwrapper">
+                                <span class="date_number">
+                                    ${num}
+                                </span>
+                                <div class="calendar">
+                                    <span class="date"></span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="info" style="display:none;" tal:repeat="year info">
+            <div class="year_info">
+                <h4>${year}</h4>
+                <div class="month_info" tal:repeat="month info[year]"><p>${month}</p>
+                    <h5 class="day_info">${info[year][month]}</h5>
+		</div>
+            </div>
+        </div>
+<!--        ${info} --!>
+    </div>
+</div>
+
