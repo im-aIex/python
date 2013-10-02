@@ -1,8 +1,8 @@
 import pygame
-import tools.nonoveridable as non
+import tools.nonoverridable as non
 
-def nonoveridable(f):
-    f.non_overridable = True
+def nonoverridable(f):
+    f.nonoverridable = True
     return f
 
 class game:
@@ -13,49 +13,69 @@ class game:
 	fps = 30
 	running, quitmessage = True, ()
 
-	def setfps(self, gfps):
-		self.fps = gfps
+	objects = ()
+
+	def onstart(self):
+		pass
 
 	def onquit(self, e):
 		pass
 
-	def tick(self):
+	def logic(self):
 		pass
 
-	@nonoveridable
+	def render(self):
+		pass
+
+	@nonoverridable
+	def tick(self):
+		self.logic()
+		self.render()
+
+	@nonoverridable
 	def quit(self, *e):
-		print e
 		self.running = False
-		self.quitmessage = (e,)
+		self.quitmessage = e
 	
-	@nonoveridable
+	@nonoverridable
 	def init(self):
-		global myscreen
-		import screen as myscreen
+		global frame
+		import frame
 		pygame.init()
 
-	@nonoveridable
-	def setup(self, sizex, sizey):
+	@nonoverridable
+	def setup(self):
 		self.init()
-		global myscreen
-		size = (sizex, sizey)
-		myscreen.setup(size)
+		global frame
+		# size = (sizex, sizey)
+		print len(self.objects)
+		for obj in self.objects:
+			obj.setup()
 
-	@nonoveridable
+	@nonoverridable
+	def setfps(self, gfps):
+		self.fps = gfps
+
+	@nonoverridable
 	def run(self):
 		try:
+			self.onstart()
 			while self.running:
 				for event in pygame.event.get():
 					if pygame.QUIT == event.type:
-						self.running = False
+						self.quit('closed')
 
 				self.clock.tick(self.fps)
 				self.tick()
 
-				if not self.running:
-					print 'here'
-					self.quit('not running')
+				# if not self.running:
+				# 	print 'here'
+				# 	self.quit('not running')
 		except Exception as e:
 			self.quit(e)
 
-		self.onquit()
+		self.onquit(self.quitmessage)
+
+	@nonoverridable
+	def add(self, obj):
+		self.objects += (obj, )
